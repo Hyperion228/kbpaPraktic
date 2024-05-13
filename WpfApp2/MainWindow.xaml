@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nyquist Plot App" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="K:" Margin="0,0,5,0"/>
+            <TextBox x:Name="txtK" Width="100"/>
+            <TextBlock Text="T3:" Margin="10,0,5,0"/>
+            <TextBox x:Name="txtT3" Width="100"/>
+            <TextBlock Text="T4:" Margin="10,0,5,0"/>
+            <TextBox x:Name="txtT4" Width="100"/>
+            <Button x:Name="btnPlot" Content="Построить" Click="btnPlot_Click" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" Margin="10">
+            <Canvas x:Name="nyquistCanvas" Width="400" Height="400" Background="White"/>
+        </Border>
+    </Grid>
+</Window>
